@@ -1,0 +1,42 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.kiip.srees.firetvsample">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/banner"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Leanback"
+        android:name=".App"
+        android:banner="@drawable/banner"
+        >
+        <activity
+            android:name="me.kiip.srees.firetvsample.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Leanback">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="me.kiip.srees.firetvsample.RecyclerViewActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Leanback">
+        </activity>
+    </application>
+    <!-- Kiip -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- END -->
+    <uses-feature android:name="android.software.leanback" android:required="false" /> tag.
+    <!-- Kiip Optional Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- END Kiip Optional Permissions -->
+
+    <uses-feature android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+</manifest>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="27dp"
+    android:layout_marginBottom="27dp"
+    android:layout_marginLeft="48dp"
+    android:layout_marginRight="48dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Screen elements that need to be within the overscan safe area go here -->
+
+        <Button
+            android:id="@+id/defaultnotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:text="default reward" />
+
+        <Button
+            android:id="@+id/nativeFixed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/defaultnotification"
+            android:text="FixedView reward" />
+
+        <me.kiip.sdk.KiipNativeRewardView
+            android:id="@+id/kiip_native_reward_view"
+            android:layout_width="300px"
+            android:layout_height="250px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="85dp"
+            android:layout_marginEnd="68dp">
+
+        </me.kiip.sdk.KiipNativeRewardView>
+
+        <Button
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/nativeFixed"
+            android:text="recycler view reward" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
